@@ -62,6 +62,20 @@ public class Lion {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public boolean eat(String food) {
+        if (food.equals("Ant")) {
+            hungry = true;
+
+        } else if (food.equals("antelope")) {
+            hungry = false;
+
+        }
+    }
 
     public boolean isHungry() {
         return hungry;
