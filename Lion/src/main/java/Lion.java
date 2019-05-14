@@ -1,6 +1,7 @@
 public class Lion {
     public static int numberOfLionsCreated = 0;
     public static int lionMaxAge = 0;
+    private static int maxNumberOfCubs = 12;
 
     private String sex;
     private int age;
@@ -24,6 +25,15 @@ public class Lion {
 
         numberOfLionsCreated++;
     }
+
+    public static boolean isLionCreationAvailable() {
+        if (numberOfLionsCreated >= 100) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 
     public boolean eat(String food) {
         if (food.equals("ant")) {
@@ -91,6 +101,31 @@ public class Lion {
 
         if (age > lionMaxAge) {
             lionMaxAge = age;
+            numberOfLionsCreated++;
+        }
+    }
+
+    public static int getMaxNumberOfCubs() {
+        return maxNumberOfCubs;
+    }
+
+    public static void setMaxNumberOfCubs(int newMax) {
+        maxNumberOfCubs = newMax;
+    }
+
+    public void haveCubs() {
+        if(sex.equals("female")) {
+            Random randomNum = new random();
+            int numberOfCubs = randomNum.nextInt(maxNumberOfCubs) + 1;
+            System.out.println("CONGRATULATIONS! You had " + numberOfCubs + "cubs");
+        }
+    }
+
+    public void haveCubs(int numberOfCubs) {
+        if (numberOfCubs > maxNumberOfCubs) {
+            System.out.println("You can only have up to " + maxNumberOfCubs);
+        } else {
+            System.out.println("Congraulations! you had " + numberOfCubs + "cubs");
         }
     }
 
