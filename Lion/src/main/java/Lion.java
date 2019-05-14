@@ -79,8 +79,12 @@ public class Lion {
     }
 
 
-    public void run(String run) {
+    public void run(String speed) {
         System.out.println("The lion is running " + run);
+    }
+
+    public void roar() {
+        System.out.println("ROAR");
     }
 
     public boolean isHungry() {
