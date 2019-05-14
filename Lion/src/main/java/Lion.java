@@ -71,10 +71,16 @@ public class Lion {
         if (food.equals("Ant")) {
             hungry = true;
 
-        } else if (food.equals("antelope")) {
+        } else if (food.equals("antelope") && this.hungry == true) {
             hungry = false;
 
         }
+        return hungry;
+    }
+
+
+    public void run(String run) {
+        System.out.println("The lion is running " + run);
     }
 
     public boolean isHungry() {
