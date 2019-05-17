@@ -15,6 +15,8 @@ public class SoftwareCompany {
         dan.checkInCode();
         dan.estimateStoryPoints();
 
+        System.out.println("_____________________________________________________");
+
         System.out.println();
         System.out.println("Jen the team lead can do all of this!");
         jen.checkInCode();
@@ -23,6 +25,9 @@ public class SoftwareCompany {
         jen.assignWork(dan);
         jen.workHard();
         jen.submitTimeCard();
+
+
+        System.out.println("_____________________________________________________");
 
         System.out.println();
         System.out.println("Arturo the architect can do all of this!");
@@ -33,6 +38,9 @@ public class SoftwareCompany {
         arturo.createTechRoadmap();
         arturo.evaluateVendor("Google");
         arturo.submitTimeCard();
+
+
+        System.out.println("_____________________________________________________");
 
         System.out.println();
         System.out.println("I'd like to create a staff member");
